@@ -1,0 +1,5 @@
+export const SEARCH_LOCATIONS = 'SEARCH_LOCATIONS';
+export const SET_LOADING = 'SET_LOADING';
+export const GET_LOCATION_IMG = 'GET_LOCATION_IMG';
+export const GET_LOCATION = 'GET_LOCATION';
+export const SET_PLACE_IMG = 'SET_PLACE_IMG';

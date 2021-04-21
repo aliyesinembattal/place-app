@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import 'antd/dist/antd.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import CountryState from './context/country/countryState';
+import './customize.scss';
+import About from './pages/About';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import ViewLocation from './pages/ViewLocation';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CountryState>
+      <div className="container">
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/location" component={ViewLocation} />
+            <Route component={NotFound} />
+          </Switch>
+        </BrowserRouter>
+      </div>
+    </CountryState>
   );
 }
 
