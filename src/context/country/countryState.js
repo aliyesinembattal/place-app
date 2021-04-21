@@ -27,7 +27,7 @@ const CountryState = (props) => {
         payload: res.data,
       });
     } catch (error) {
-      message.error(error);
+      message.error(error.toString());
     }
   };
 
@@ -41,7 +41,7 @@ const CountryState = (props) => {
         payload: res.data.geonames[0],
       });
     } catch (error) {
-      message.error(error);
+      message.error(error.toString());
     }
   };
   const getNearbyPlaceWeather = async (lat, lng) => {
@@ -54,7 +54,7 @@ const CountryState = (props) => {
         payload: res.data.weatherObservation,
       });
     } catch (error) {
-      message.error(error);
+      message.error(error.toString());
     }
   };
 
@@ -67,7 +67,7 @@ const CountryState = (props) => {
         payload: res.data.hits,
       });
     } catch (error) {
-      message.error(error);
+      message.error(error.toString());
     }
   };
 
