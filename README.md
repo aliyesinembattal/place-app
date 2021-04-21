@@ -14,6 +14,6 @@
 
  
 
-### `yarn start`
+### proje  `yarn start` ile çalışıyor.
 
 
